@@ -1,11 +1,11 @@
-﻿using System.Text.RegularExpressions;
+﻿using ConsoleApp.Models;
 
 namespace ConsoleApp.Service
 {
     internal class CourseService
     {
 
-        public List<Group> Groups { get; set; } = new List<Group>();
+        public List<Group> Groups { get; set; } = new();
 
         public void CreateGroup()
         {
@@ -56,13 +56,13 @@ namespace ConsoleApp.Service
             Console.WriteLine("\nButun qruplar:");
             foreach (Group group in Groups)
             {
-                Console.WriteLine($"Qrup Nömrəsi: {group.}, Kateqoriya: {group.Category}, Tələbə Sayı: {group.Students.Count}");
+                Console.WriteLine($"Qrup Nömrəsi: {group.NO}, Kateqoriya: {group.Category}, Tələbə Sayı: {group.IsOnline}");
             }
         }
 
         internal void EditGroup()
         {
-            throw new NotImplementedException();
+
         }
     }
 
